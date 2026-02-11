@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
 import { Title } from "./Title"
 import { Followers } from "./TotalFollowers"
 import { Switcher } from "./SwitchTheme"
