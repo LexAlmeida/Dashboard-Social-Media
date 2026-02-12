@@ -1,14 +1,20 @@
-import { Box } from "@mui/material"
+import { Box, Grid } from "@mui/material"
 import { Title } from "./Title"
 import { Followers } from "./TotalFollowers"
 import { Switcher } from "./SwitchTheme"
 
 export const Header = () => {
     return (
-        <Box sx={{background: '#ccc9c9aa'}}>
-            <Title/>
-            <Followers/>
-            <Switcher/>
-        </Box>
+        <Box sx={{flexGrow:1,background: '#ccc9c9aa'}}>
+            <Grid container spacing={2}>
+                <Grid size={6}>
+                    <Title/>
+                    <Followers/>
+                </Grid>
+                <Grid size={6} alignItems="center" justifyContent="flex-end" display="flex">
+                    <Switcher/>
+                </Grid>
+            </Grid>
+        </Box> 
     )
 }
