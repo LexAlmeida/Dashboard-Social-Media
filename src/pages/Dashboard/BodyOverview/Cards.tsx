@@ -1,4 +1,6 @@
 import { Card, Grid, Typography } from "@mui/material"
+import iconDown from "../../../assets/iconDown.svg"
+import iconUp from "../../../assets/iconUp.svg"
 
 interface MyCardProps {
     title: string,
@@ -19,11 +21,13 @@ export const MyCard = ({title, icon, number, today}:MyCardProps) => {
             boxShadow: 'none',}}>
             <Grid display='flex' justifyContent='space-between' width='90%' padding='5px'>
                 <Typography fontSize={11}>{title}</Typography>
-                <Typography fontSize={16}>{icon }</Typography>
+                <img src={icon} width={16} height={16} />
             </Grid>  
             <Grid display='flex' justifyContent='space-between' width='90%'>
                 <Typography fontSize={22}>{number}</Typography>
-                <Typography fontSize={12} color={today > 0 ? 'green' : 'red'}>{today > 0 ? `+${today}` : today}%</Typography>
+                <Typography fontSize={12} color={today > 0 ? 'green' : 'red'}>
+                    <img src={today > 0 ? iconUp : iconDown} width={6} height={6} />
+                    {today > 0 ? `+${today}` : today}%</Typography>
             </Grid>
         </Card>
     )
