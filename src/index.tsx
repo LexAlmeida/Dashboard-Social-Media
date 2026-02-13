@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from 'react-dom/client';
-import { Dashboard } from "./pages/Dashboard/Dashboard";
+import { App } from "./pages/Dashboard/Dashboard";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
-        <Dashboard/>
+        <App/>
     </React.StrictMode>
 )   

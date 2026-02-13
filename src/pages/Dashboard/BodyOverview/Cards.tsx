@@ -9,7 +9,14 @@ interface MyCardProps {
 
 export const MyCard = ({title, icon, number, today}:MyCardProps) => {
     return (
-        <Card sx={{padding: '15px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px', backgroundColor: '#cfcbcb7c'}}>
+        <Card sx={{
+            padding: '15px', 
+            display: 'flex', 
+            flexDirection: 'column', 
+            alignItems: 'center', 
+            gap: '4px', 
+            backgroundColor: 'background.paper',
+            boxShadow: 'none',}}>
             <Grid display='flex' justifyContent='space-between' width='90%' padding='5px'>
                 <Typography fontSize={11}>{title}</Typography>
                 <Typography fontSize={16}>{icon }</Typography>

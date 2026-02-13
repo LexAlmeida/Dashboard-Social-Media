@@ -5,7 +5,9 @@ import { Switcher } from "./SwitchTheme"
 
 export const Header = () => {
     return (
-        <Box sx={{flexGrow:1,background: '#ccc9c9aa'}}>
+        <Box sx={{
+            flexGrow:1,
+            margin: '20px 0'}}>
             <Grid container spacing={2}>
                 <Grid size={6}>
                     <Title/>
