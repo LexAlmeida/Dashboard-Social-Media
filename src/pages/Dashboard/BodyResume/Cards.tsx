@@ -18,6 +18,7 @@ export const MyCard = ({at, followers, today}:MyCardProps) => {
             boxShadow: 'none',
             color: 'text.primary',}}>
             <Typography 
+                color="text.secondary"
                 fontSize={12}>
                     {at}
             </Typography>

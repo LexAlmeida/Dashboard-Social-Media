@@ -6,15 +6,16 @@ import { BodyOverview } from "./BodyOverview/BodyOverview"
 import { Title } from "./BodyOverview/Title"
 import { LightTheme } from "../../themes/light"
 import { DarkTheme } from "../../themes/dark"
-
-const theme = DarkTheme
+import { useState } from "react"
 
 export const App = () => {
+    const [isDark, setIsDark] = useState(false);
+    const theme = isDark ? DarkTheme : LightTheme
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
         <Box sx={{padding: {xs: '0 5%', sm: '0 8%', md:'0 10%'}}}>
-            <Header/>
+            <Header isDark={isDark} onToggle={() => setIsDark(!isDark)}/>
             <BodyResume/>
             <Title/>
             <BodyOverview/>

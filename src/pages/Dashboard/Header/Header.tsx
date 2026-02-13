@@ -3,7 +3,11 @@ import { Title } from "./Title"
 import { Followers } from "./TotalFollowers"
 import { Switcher } from "./SwitchTheme"
 
-export const Header = () => {
+interface HeaderProps {
+    isDark: boolean,
+    onToggle: () => void}
+
+export const Header = ({isDark, onToggle}: HeaderProps) => {
     return (
         <Box sx={{
             flexGrow:1,
@@ -14,7 +18,7 @@ export const Header = () => {
                     <Followers/>
                 </Grid>
                 <Grid size={6} alignItems="center" justifyContent="flex-end" display="flex">
-                    <Switcher/>
+                    <Switcher isDark={isDark} onToggle={onToggle}/>
                 </Grid>
             </Grid>
         </Box> 
