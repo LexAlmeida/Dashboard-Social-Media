@@ -4,19 +4,31 @@ interface MyCardProps {
     at: string,
     followers: number,
     today: number,
+    socialColor: string,
 }
 
-export const MyCard = ({at, followers, today}:MyCardProps) => {
+export const MyCard = ({at, followers, today, socialColor}:MyCardProps) => {
     return (
         <Card sx={{
-            padding: '20px', 
+            padding: '40px 20px 25px 20px', 
             display: 'flex', 
             flexDirection: 'column', 
             alignItems: 'center', 
             gap: '5px',
             backgroundColor: 'background.paper',
             boxShadow: 'none',
-            color: 'text.primary',}}>
+            color: 'text.primary',
+            position: 'relative',
+            overflow: 'hidden',
+            '&::before': {
+                content: '""',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '4px',
+                background: socialColor,
+            }}}>
             <Typography 
                 color="text.secondary"
                 fontSize={12}>
